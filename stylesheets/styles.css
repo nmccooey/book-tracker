@@ -1,0 +1,92 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+}
+.app-title {
+    text-transform: uppercase;
+    align-self: center;
+}
+
+.app-description {
+    align-self: center;
+}
+
+.main-container {
+    display: flex;
+    border: solid black 4px;
+    border-radius: 20px;
+    width: 75%;
+    align-self: center;
+}
+
+.table-container {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+.book-table {
+    margin-top: 10px;
+    width: 90%;
+}
+
+.book-table th {
+    text-align: left;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.table-body {
+    font-size: 20px;
+}
+
+.table-body tr td {
+    outline: 1px solid black;
+}
+
+.button-container {
+    width: 10%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.add-book-button {
+    width: 100px;
+    height: 40px;
+    margin-top: 10px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.add-book-button:hover {
+    background-color: lavender;
+    cursor: pointer;
+}
+
+.add-book-button:focus {
+    outline: none;
+    border: solid black 3px;
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    background-color: rgb(179, 213, 235);
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+}
+
+footer a {
+    align-self: center;
+    margin-left: 5px;
+    text-decoration: none;
+}

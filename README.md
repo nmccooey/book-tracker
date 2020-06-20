@@ -1,0 +1,1 @@
+A simple web app that allows the user to keep track of books he or she has read or is in the process of reading.
