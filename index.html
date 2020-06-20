@@ -12,7 +12,24 @@
         <header class="header-container">
             <h1 class="app-title">Book Tracker</h1>
             <h2 class="app-description">Keep Track of All the Books you Read!</h2>
-            <button class="add-book-button">Add Book</button>
+            <button id="add-book-button" class="button">Add Book</button>
+            <!-- Modal -->
+            <div class="bg-modal">
+                <div class="modal-contents">
+                    <h2>Enter Book Information:</h2>
+                    <div class="close">+</div>
+                    <form action="">
+                        <input class="book-item" type="text" placeholder="Title">
+                        <input class="book-item" type="text" placeholder="Author">
+                        <input class="book-item" type="text" placeholder="Pages">
+                        <div class="checkbox-container">
+                            <label for="read-book-checkbox">Check here if you have read the book: </label>
+                            <input type="checkbox" id="read-book-checkbox" name="read-book-checkbox" value="true">
+                        </div>
+                        <button id="submit-book-button" class="button">Submit Book</button>          
+                    </form>
+                </div>
+            </div>
         </header>
         <main class="main-container">
             <table class="book-table">
