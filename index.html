@@ -18,15 +18,15 @@
                 <div class="modal-contents">
                     <h2>Enter Book Information:</h2>
                     <div class="close">+</div>
-                    <form action="">
-                        <input class="book-item" type="text" placeholder="Title">
-                        <input class="book-item" type="text" placeholder="Author">
-                        <input class="book-item" type="text" placeholder="Pages">
+                    <form id="book-form">
+                        <input id="title-input" class="book-item" type="text" placeholder="Title">
+                        <input id="author-input" class="book-item" type="text" placeholder="Author">
+                        <input id="pages-input" class="book-item" type="text" placeholder="Pages">
                         <div class="checkbox-container">
                             <label for="read-book-checkbox">Check here if you have read the book: </label>
                             <input type="checkbox" id="read-book-checkbox" name="read-book-checkbox" value="true">
                         </div>
-                        <button id="submit-book-button" class="button">Submit Book</button>          
+                        <button id="submit-book-button" class="button" type="submit">Submit Book</button>          
                     </form>
                 </div>
             </div>

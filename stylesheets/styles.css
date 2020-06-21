@@ -6,7 +6,7 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    background-image: url("/images/natural_paper.png");
+    background-image: url("../images/natural_paper.png");
     font-family: 'Gloria Hallelujah', cursive;
 }
 
@@ -30,7 +30,7 @@ body {
 }
 
 .button {
-    background-image: url("/images/light_brown_paper.png");
+    background-image: url("../images/light_brown_paper.png");
     margin: 10px 0px 10px 0px;
     text-transform: uppercase;
     border-radius: 10px;
@@ -44,6 +44,7 @@ body {
 }
 
 .button:hover {
+    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.4);
 }
 
 .button:focus {
@@ -58,7 +59,7 @@ body {
 }
 
 .book-table {
-    background-image: url("/images/crumpled_paper.png");
+    background-image: url("../images/crumpled_paper.png");
     border: black solid 2px;
     border-radius: 5px;
     margin: 10px 0px 10px 0px;
@@ -87,7 +88,7 @@ body {
     border: black solid 4px;
 	height: 400px;
 	width: 550px;
-	background-image: url("/images/natural_paper.png");
+	background-image: url("../images/natural_paper.png");
 	text-align: center;
 	padding: 20px;
 	position: relative;
@@ -120,6 +121,10 @@ body {
     width: 25px;
     height: 25px;
     margin-left: 10px;
+}
+
+td {
+    text-align: center;
 }
 
 .close {
