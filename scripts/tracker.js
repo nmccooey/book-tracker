@@ -1,5 +1,6 @@
 let bookList = [];
 
+
 function Book(title, author, pages, isRead) {
 	this.title = title;
 	this.author = author;
@@ -45,6 +46,7 @@ function newRender(newBook) {
 	const tableBody = document.querySelector(".table-body");
 	const newRow = document.createElement("tr");
 	let bookIndexNumber = bookList.indexOf(newBook);
+	newRow.className = "book-row";
 	newRow.setAttribute('data-index', `${bookIndexNumber}`);
 	tableBody.appendChild(newRow);
 
@@ -52,8 +54,22 @@ function newRender(newBook) {
         const newTD = document.createElement('td');
 		newTD.innerHTML = newBook[key];
 		newRow.appendChild(newTD);
-	
 	}
-	
+
+	// Add delete button.
+	const deleteButtonTD = document.createElement('td');
+	newRow.appendChild(deleteButtonTD);
+	const deleteButton = document.createElement("button");
+	deleteButton.className = "delete-button";
+	deleteButton.setAttribute("type", "button");
+	deleteButton.innerHTML = "&#10006;";
+	deleteButtonTD.appendChild(deleteButton);
+
+	deleteButton.addEventListener("click", function() {
+		const rowIndex = document.querySelector(`[data-index="${bookIndexNumber}"]`);
+        tableBody.removeChild(rowIndex);
+        delete bookList[bookIndexNumber];
+	});
+
 	document.querySelector('.bg-modal').style.display = "none";
 }
