@@ -96,9 +96,9 @@ body {
 	height: 100%;
 	position: absolute;
 	top: 0;
-	display: none;
-	justify-content: center;
-	align-items: center;
+    display: none;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-contents {
