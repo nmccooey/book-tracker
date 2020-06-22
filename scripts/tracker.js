@@ -30,10 +30,10 @@ function addBook(event) {
 	let authorValue = document.getElementById("author-input").value;
 	let pagesValue = document.getElementById("pages-input").value;
 
-	let readBookStatus = "In-Progress"; // Default is not read.
+	let readBookStatus = "No"; // Default is not read.
 	let readBookValue = document.getElementById("read-book-checkbox").checked;
 	if (readBookValue == true) {
-		readBookStatus = "&check;"
+		readBookStatus = "Yes";
 	}
 	
 	let newBook = new Book(titleValue, authorValue, pagesValue, readBookStatus);
@@ -53,8 +53,32 @@ function newRender(newBook) {
 	for (key in newBook) {
         const newTD = document.createElement('td');
 		newTD.innerHTML = newBook[key];
+		if (key == "isRead") {
+			newTD.className = "read-status";
+		}
 		newRow.appendChild(newTD);
 	}
+
+	// Add Read button.
+	const readButtonTD = document.createElement('td');
+	newRow.appendChild(readButtonTD);
+	const readButton = document.createElement("button");
+	let isReadValue = bookList[bookIndexNumber].isRead;
+	readButton.className = "read-button button";
+	readButton.setAttribute("type", "button");
+	readButton.innerHTML = "Change";
+	readButtonTD.appendChild(readButton);
+
+	readButton.addEventListener("click", function() {
+		const rowIndex = document.querySelector(`[data-index="${bookIndexNumber}"]`);
+		if (isReadValue == "No") {
+			isReadValue = "Yes"
+		} else {
+			isReadValue = "No";
+		}
+		rowIndex.querySelector(".read-status").innerHTML = isReadValue;	
+	});
+	
 
 	// Add delete button.
 	const deleteButtonTD = document.createElement('td');

@@ -43,6 +43,12 @@ body {
     outline: none;
 }
 
+.read-button {
+    font-size: 14px;
+    height: 40px;
+    width: 100px;
+}
+
 .button:hover {
     box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.4);
 }
@@ -62,6 +68,7 @@ body {
 
 .delete-button:hover {
     background-color: rgb(252, 31, 31);
+    cursor: pointer;
 }
 
 .delete-button:focus {
